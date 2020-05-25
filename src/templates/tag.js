@@ -7,7 +7,7 @@ import styled from 'styled-components';
 import { mixins, Main } from '@styles';
 import { theme } from '@styles/theme';
 
-const { colors, fontSizes } = theme;
+const { fontSizes } = theme;
 
 const StyledTagsContainer = styled(Main)`
   max-width: 1000px;
@@ -33,11 +33,11 @@ const StyledTagsContainer = styled(Main)`
         font-size: inherit;
         margin: 0;
         a {
-          color: ${colors.lightSlate};
+          color: ${({ theme }) => theme.lightSlate};
         }
       }
       .subtitle {
-        color: ${colors.slate};
+        color: ${({ theme }) => theme.slate};
         font-size: ${fontSizes.sm};
 
         .tag {

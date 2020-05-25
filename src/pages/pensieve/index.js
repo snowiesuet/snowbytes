@@ -8,7 +8,7 @@ import { IconZap } from '@components/icons';
 import styled from 'styled-components';
 import { mixins, media, Main } from '@styles';
 import { theme } from '@styles/theme';
-const { colors, fontSizes, fonts } = theme;
+const { fontSizes, fonts } = theme;
 
 const StyledMainContainer = styled(Main)`
   & > header {
@@ -52,7 +52,7 @@ const StyledPostInner = styled.div`
   height: 100%;
   border-radius: ${theme.borderRadius};
   transition: ${theme.transition};
-  background-color: ${colors.lightNavy};
+  background-color: ${({ theme }) => theme.lightPrimary};
   header,
   a {
     width: 100%;
@@ -74,7 +74,7 @@ const StyledPostHeader = styled.div`
   margin-bottom: 30px;
 `;
 const StyledFolder = styled.div`
-  color: ${colors.green};
+  color: ${({ theme }) => theme.accent};
   svg {
     width: 40px;
     height: 40px;
@@ -83,17 +83,17 @@ const StyledFolder = styled.div`
 const StyledPostName = styled.h5`
   margin: 0 0 10px;
   font-size: ${fontSizes.xxl};
-  color: ${colors.lightestSlate};
+  color: ${({ theme }) => theme.lightestSlate};
 `;
 const StyledPostDescription = styled.div`
   font-size: 17px;
-  color: ${colors.lightSlate};
+  color: ${({ theme }) => theme.lightSlate};
 `;
 const StyledDate = styled.span`
   text-transform: uppercase;
   font-family: ${fonts.SFMono};
   font-size: ${fontSizes.xs};
-  color: ${colors.lightSlate};
+  color: ${({ theme }) => theme.lightSlate};
 `;
 const StyledTags = styled.ul`
   display: flex;
@@ -106,7 +106,7 @@ const StyledTags = styled.ul`
   li {
     font-family: ${fonts.SFMono};
     font-size: ${fontSizes.xs};
-    color: ${colors.green};
+    color: ${({ theme }) => theme.accent};
     line-height: 1.75;
     margin-right: 15px;
     &:last-of-type {

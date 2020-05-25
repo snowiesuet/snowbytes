@@ -6,11 +6,10 @@ import { IconLoader } from '@components/icons';
 import styled from 'styled-components';
 import { mixins } from '@styles';
 import { theme } from '@styles/theme';
-const { colors } = theme;
 
 const StyledContainer = styled.div`
   ${mixins.flexCenter};
-  background-color: ${colors.darkNavy};
+  background-color: ${({ theme }) => theme.strongPrimary};
   position: fixed;
   width: 100%;
   height: 100%;

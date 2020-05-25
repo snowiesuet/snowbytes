@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import { mixins, Main } from '@styles';
 import { theme } from '@styles/theme';
 
-const { colors, fontSizes, fonts } = theme;
+const { fontSizes, fonts } = theme;
 
 const StyledTagsContainer = styled(Main)`
   max-width: 1000px;
@@ -17,15 +17,15 @@ const StyledTagsContainer = styled(Main)`
     margin-bottom: 50px;
   }
   ul {
-    color: ${colors.lightSlate};
+    color: ${({ theme }) => theme.lightSlate};
     li {
       font-size: ${fontSizes.xxl};
 
       a {
         ${mixins.inlineLink};
-        color: ${colors.lightSlate};
+        color: ${({ theme }) => theme.lightSlate};
         .count {
-          color: ${colors.slate};
+          color: ${({ theme }) => theme.slate};
           font-family: ${fonts.SFMono};
           font-size: ${fontSizes.md};
         }

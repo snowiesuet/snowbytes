@@ -6,9 +6,6 @@ import PropTypes from 'prop-types';
 import { Layout } from '@components';
 import styled from 'styled-components';
 import { Main } from '@styles';
-import { theme } from '@styles/theme';
-
-const { colors } = theme;
 
 const StyledPostContainer = styled(Main)`
   max-width: 1000px;
@@ -33,7 +30,7 @@ const StyledPostContent = styled.div`
   p {
     margin: 1em 0;
     line-height: 1.5;
-    color: ${colors.lightSlate};
+    color: ${({ theme }) => theme.lightSlate};
   }
 `;
 

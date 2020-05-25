@@ -10,7 +10,7 @@ import styled from 'styled-components';
 import { mixins, media, Main } from '@styles';
 import { theme } from '@styles/theme';
 
-const { colors, fonts, fontSizes } = theme;
+const { fonts, fontSizes } = theme;
 
 const StyledMainContainer = styled(Main)``;
 const StyledTableContainer = styled.div`
@@ -34,7 +34,7 @@ const StyledTable = styled.table`
 
     &:hover,
     &:focus {
-      background-color: ${colors.lightNavy};
+      background-color: ${({ theme }) => theme.lightPrimary};
     }
   }
   th,
@@ -58,7 +58,7 @@ const StyledTable = styled.table`
     }
     &.title {
       padding-top: 15px;
-      color: ${colors.lightestSlate};
+      color: ${({ theme }) => theme.lightestSlate};
       font-size: ${fontSizes.xl};
       font-weight: 700;
     }

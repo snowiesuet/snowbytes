@@ -6,7 +6,7 @@ import styled from 'styled-components';
 import { mixins, media, Section, Heading } from '@styles';
 import { theme } from '@styles/theme';
 
-const { colors, fontSizes, fonts } = theme;
+const { fontSizes, fonts } = theme;
 
 const StyledContainer = styled(Section)`
   text-align: center;
@@ -18,7 +18,7 @@ const StyledContainer = styled(Section)`
 `;
 const StyledHeading = styled(Heading)`
   display: block;
-  color: ${colors.green};
+  color: ${({ theme }) => theme.accent};
   font-size: ${fontSizes.md};
   font-family: ${fonts.SFMono};
   font-weight: normal;

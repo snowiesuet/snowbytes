@@ -28,8 +28,8 @@ const GlobalStyle = createGlobalStyle`
     overflow-x: hidden;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
-    background-color: ${colors.navy};
-    color: ${colors.slate};
+    background-color: ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.secondary};
     line-height: 1.3;
     font-family: ${fonts.Calibre};
     font-size: ${fontSizes.xl};
@@ -50,8 +50,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   ::selection {
-    background-color: ${colors.slate};
-    color: ${colors.lightestSlate};
+    background-color: ${({ theme }) => theme.slate};
+    color: ${({ theme }) => theme.lightestSlate};
   }
 
   #root {
@@ -68,7 +68,7 @@ const GlobalStyle = createGlobalStyle`
   h5,
   h6 {
     font-weight: 600;
-    color: ${colors.lightestSlate};
+    color: ${({ theme }) => theme.lightestSlate};
     margin: 0 0 10px 0;
   }
 
@@ -121,7 +121,7 @@ const GlobalStyle = createGlobalStyle`
 
     &:hover,
     &:focus {
-      color: ${theme.colors.green};
+      color: ${({ theme }) => theme.accent};
     }
   }
 
@@ -161,7 +161,7 @@ const GlobalStyle = createGlobalStyle`
     }
 
     & > code {
-      background-color: ${colors.lightNavy};
+      background: ${({ theme }) => theme.lightPrimary};
       color: ${colors.white};
       font-size: ${fontSizes.sm};
       border-radius: ${theme.borderRadius};
@@ -183,14 +183,14 @@ const GlobalStyle = createGlobalStyle`
           content: '▹';
           position: absolute;
           left: 0;
-          color: ${colors.green};
+          color: ${({ theme }) => theme.accent};
         }
       }
     }
   }
 
   blockquote {
-    border-left-color: ${colors.green};
+    border-left-color: ${({ theme }) => theme.accent};
     border-left-style: solid;
     border-left-width: 1px;
     margin-left: 0px;
@@ -204,7 +204,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   hr {
-    background-color: ${colors.lightestNavy};
+    background-color: ${({ theme }) => theme.lightestPrimary};
     height: 1px;
     border-width: 0px;
     border-style: initial;
@@ -219,18 +219,18 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #logo {
-    color: ${colors.green};
+    color: ${({ theme }) => theme.accent};
   }
 
   .overline {
-    color: ${colors.green};
+    color: ${({ theme }) => theme.accent};
     font-family: ${fonts.SFMono};
     font-size: ${fontSizes.md};
     font-weight: normal;
   }
 
   .subtitle {
-    color: ${colors.green};
+    color: ${({ theme }) => theme.accent};
     margin: 0 0 20px 0;
     font-size: ${fontSizes.md};
     font-family: ${fonts.SFMono};
@@ -249,7 +249,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     align-items: center;
     margin-bottom: 50px;
-    color: ${colors.green};
+    color: ${({ theme }) => theme.accent};
 
     .arrow {
       display: block;

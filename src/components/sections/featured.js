@@ -29,7 +29,7 @@ const StyledContent = styled.div`
 const StyledLabel = styled.h4`
   font-size: ${fontSizes.smish};
   font-weight: normal;
-  color: ${colors.green};
+  color: ${({ theme }) => theme.accent};
   font-family: ${fonts.SFMono};
   margin-top: 10px;
   padding-top: 0;
@@ -37,7 +37,7 @@ const StyledLabel = styled.h4`
 const StyledProjectName = styled.h5`
   font-size: 28px;
   margin: 0 0 20px;
-  color: ${colors.lightestSlate};
+  color: ${({ theme }) => theme.lightestSlate};
   ${media.tablet`font-size: 24px;`};
   ${media.thone`color: ${colors.white};`};
   a {
@@ -49,8 +49,8 @@ const StyledDescription = styled.div`
   position: relative;
   z-index: 2;
   padding: 25px;
-  background-color: ${colors.lightNavy};
-  color: ${colors.lightSlate};
+  background-color: ${({ theme }) => theme.lightPrimary};
+  color: ${({ theme }) => theme.lightSlate};
   font-size: ${fontSizes.lg};
   border-radius: ${theme.borderRadius};
   ${media.thone`
@@ -80,7 +80,7 @@ const StyledTechList = styled.ul`
   li {
     font-family: ${fonts.SFMono};
     font-size: ${fontSizes.smish};
-    color: ${colors.slate};
+    color: ${({ theme }) => theme.slate};
     margin-right: ${theme.margin};
     margin-bottom: 7px;
     white-space: nowrap;
@@ -88,7 +88,7 @@ const StyledTechList = styled.ul`
       margin-right: 0;
     }
     ${media.thone`
-      color: ${colors.lightestSlate};
+      color: ${({ theme }) => theme.lightestSlate};
       margin-right: 10px;
     `};
   }
@@ -99,7 +99,7 @@ const StyledLinkWrapper = styled.div`
   position: relative;
   margin-top: 10px;
   margin-left: -10px;
-  color: ${colors.lightestSlate};
+  color: ${({ theme }) => theme.lightestSlate};
   a {
     padding: 10px;
     svg {
@@ -129,7 +129,7 @@ const StyledImgContainer = styled.a`
   grid-row: 1 / -1;
   position: relative;
   z-index: 1;
-  background-color: ${colors.green};
+  background-color: ${({ theme }) => theme.accent};
   border-radius: ${theme.radius + 1}px;
   transition: ${theme.transition};
   ${media.tablet`height: 100%;`};
@@ -157,7 +157,7 @@ const StyledImgContainer = styled.a`
     bottom: 0;
     z-index: 3;
     transition: ${theme.transition};
-    background-color: ${colors.navy};
+    background-color: ${({ theme }) => theme.primary};
     mix-blend-mode: screen;
   }
 `;

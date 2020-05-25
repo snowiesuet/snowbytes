@@ -6,14 +6,14 @@ import { Layout } from '@components';
 import styled from 'styled-components';
 import { mixins, media, Main } from '@styles';
 import { theme } from '@styles/theme';
-const { colors, fonts, navDelay } = theme;
+const { fonts, navDelay } = theme;
 
 const StyledMainContainer = styled(Main)`
   ${mixins.flexCenter};
   flex-direction: column;
 `;
 const StyledTitle = styled.h1`
-  color: ${colors.green};
+  color: ${({ theme }) => theme.accent};
   font-family: ${fonts.SFMono};
   font-size: 12vw;
   line-height: 1;

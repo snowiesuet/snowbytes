@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { media } from '@styles';
 import { theme } from '@styles/theme';
 
-const { colors, loaderDelay } = theme;
+const { loaderDelay } = theme;
 
 const StyledContainer = styled.div`
   width: 40px;
@@ -14,7 +14,7 @@ const StyledContainer = styled.div`
   left: ${props => (props.orientation === 'left' ? '40px' : 'auto')};
   right: ${props => (props.orientation === 'left' ? 'auto' : '40px')};
   z-index: 10;
-  color: ${colors.lightSlate};
+  color: ${({ theme }) => theme.lightSlate};
   ${media.desktop`right: 25px;`};
   ${media.tablet`display: none;`};
 `;

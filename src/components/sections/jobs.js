@@ -69,7 +69,7 @@ const StyledTabButton = styled.button`
   height: ${theme.tabHeight}px;
   padding: 0 20px 2px;
   transition: ${theme.transition};
-  border-left: 2px solid ${colors.lightestNavy};
+  border-left: 2px solid ${({ theme }) => theme.lightestPrimary};
   text-align: left;
   white-space: nowrap;
   font-family: ${fonts.SFMono};
@@ -81,17 +81,17 @@ const StyledTabButton = styled.button`
     padding: 0 15px;
     text-align: center;
     border-left: 0;
-    border-bottom: 2px solid ${colors.lightestNavy};
+    border-bottom: 2px solid ${({ theme }) => theme.lightestPrimary};
     min-width: 120px;
   `};
   &:hover,
   &:focus {
-    background-color: ${colors.lightNavy};
+    background-color: ${({ theme }) => theme.lightPrimary};
   }
 `;
 const StyledHighlight = styled.span`
   display: block;
-  background: ${colors.green};
+  background: ${({ theme }) => theme.accent};
   width: 2px;
   height: ${theme.tabHeight}px;
   border-radius: ${theme.borderRadius};
@@ -136,20 +136,20 @@ const StyledTabContent = styled.div`
   }
 `;
 const StyledJobTitle = styled.h4`
-  color: ${colors.lightestSlate};
+  color: ${({ theme }) => theme.lightestSlate};
   font-size: ${fontSizes.xxl};
   font-weight: 500;
   margin-bottom: 5px;
 `;
 const StyledCompany = styled.span`
-  color: ${colors.green};
+  color: ${({ theme }) => theme.accent};
 `;
 const StyledJobDetails = styled.h5`
   font-family: ${fonts.SFMono};
   font-size: ${fontSizes.smish};
   font-weight: normal;
   letter-spacing: 0.05em;
-  color: ${colors.lightSlate};
+  color: ${({ theme }) => theme.lightSlate};
   margin-bottom: 30px;
   svg {
     width: 15px;

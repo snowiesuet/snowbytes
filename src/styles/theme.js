@@ -1,40 +1,14 @@
 import { hex2rgba } from '@utils';
 
 //light
-const LIGHT_ACCENT = '#823350';
 const LIGHTER_BG = '#ffffff';
 const DARKER_BG = '#000000';
-const DARK_ACCENT = '#CDCA7E';
 const DARK_BG = '#0B0011';
 const LIGHT_BG = '#ffffff';
-const theme = {
-  dark_colors: {
-    darkNavy: DARKER_BG,
-    navy: DARK_BG,
-    lightNavy: '#574063',
-    lightestNavy: '#303C55',
-    slate: '#d9d4e3',
-    lightSlate: '#D9D4E3',
-    lightestSlate: '#FCFAFC',
-    white: '#e6f1ff',
-    green: DARK_ACCENT,
-    transGreen: hex2rgba(DARK_ACCENT, 0.07),
-    shadowNavy: hex2rgba(DARK_BG, 0.7),
-  },
-  light_colors: {
-    darkNavy: LIGHT_BG,
-    navy: LIGHTER_BG,
-    lightNavy: '#D6CADD',
-    lightestNavy: '#303C55',
-    slate: '#796878',
-    lightSlate: '#808085',
-    lightestSlate: '#8D6497',
-    white: '#e6f1ff',
-    green: LIGHT_ACCENT,
-    transGreen: hex2rgba(LIGHT_ACCENT, 0.07),
-    shadowNavy: hex2rgba(LIGHT_BG, 0.7),
-  },
+const LIGHT_ACCENT = '#823350';
+const DARK_ACCENT = '#CDCA7E';
 
+const theme = {
   colors: {
     darkNavy: LIGHT_BG,
     navy: LIGHTER_BG,
@@ -87,19 +61,36 @@ const theme = {
   navDelay: 1000,
   loaderDelay: 2000,
 };
-
 const lightTheme = {
-  body: '#E2E2E2',
-  text: '#363537',
+  primary: '#FCFAFC',
+  secondary: '#796878',
   toggleBorder: '#FFF',
   gradient: 'linear-gradient(#39598A, #79D7ED)',
+  slate: '#796878',
+  accent: '#823350',
+  lightPrimary: '#303C55',
+  lightestPrimary: '#574063',
+  transAccent: hex2rgba(LIGHT_ACCENT, 0.07),
+  shadowPrimary: hex2rgba(LIGHT_BG, 0.7),
+  strongPrimary: LIGHTER_BG,
+  lightSlate: '#808085',
+  lightestSlate: '#8D6497',
 };
 
 const darkTheme = {
-  body: '#363537',
-  text: '#FAFAFA',
+  primary: '#0B0011',
+  secondary: '#d9d4e3',
   toggleBorder: '#6B8096',
   gradient: 'linear-gradient(#091236, #1E215D)',
+  slate: '#d9d4e3',
+  accent: '#CDCA7E',
+  lightPrimary: '#574063',
+  lightestPrimary: '#303C55',
+  transAccent: hex2rgba(DARK_ACCENT, 0.07),
+  shadowPrimary: hex2rgba(DARK_BG, 0.7),
+  strongPrimary: DARKER_BG,
+  lightSlate: '#D9D4E3',
+  lightestSlate: '#FCFAFC',
 };
 
 export { theme, lightTheme, darkTheme };
