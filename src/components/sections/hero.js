@@ -3,7 +3,8 @@ import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { email } from '@config';
 import styled from 'styled-components';
-import { theme, mixins, media, Section } from '@styles';
+import { mixins, media, Section } from '@styles';
+import { theme } from '@styles/theme';
 const { colors, fontSizes, fonts, navDelay, loaderDelay } = theme;
 
 const StyledContainer = styled(Section)`

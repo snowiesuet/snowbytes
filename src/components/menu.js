@@ -3,7 +3,9 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 import { navLinks } from '@config';
 import styled from 'styled-components';
-import { theme, mixins, media } from '@styles';
+import { mixins, media } from '@styles';
+import { theme } from '@styles/theme';
+
 const { colors, fontSizes, fonts } = theme;
 
 const StyledContainer = styled.div`
@@ -110,6 +112,7 @@ const Menu = ({ menuOpen, toggleMenu }) => {
           <ResumeLink href="/resume.pdf" target="_blank" rel="nofollow noopener noreferrer">
             Resume
           </ResumeLink>
+          Day/ Night
         </NavLinks>
       </Sidebar>
     </StyledContainer>

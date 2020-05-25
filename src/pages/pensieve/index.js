@@ -6,7 +6,8 @@ import PropTypes from 'prop-types';
 import { Layout } from '@components';
 import { IconZap } from '@components/icons';
 import styled from 'styled-components';
-import { theme, mixins, media, Main } from '@styles';
+import { mixins, media, Main } from '@styles';
+import { theme } from '@styles/theme';
 const { colors, fontSizes, fonts } = theme;
 
 const StyledMainContainer = styled(Main)`

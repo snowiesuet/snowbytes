@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import styled from 'styled-components';
-import { theme, media } from '@styles';
+import { media } from '@styles';
+import { theme } from '@styles/theme';
+
 const { colors, loaderDelay } = theme;
 
 const StyledContainer = styled.div`

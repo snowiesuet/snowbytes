@@ -4,7 +4,9 @@ import kebabCase from 'lodash/kebabCase';
 import PropTypes from 'prop-types';
 import { Layout } from '@components';
 import styled from 'styled-components';
-import { theme, mixins, Main } from '@styles';
+import { mixins, Main } from '@styles';
+import { theme } from '@styles/theme';
+
 const { colors, fontSizes } = theme;
 
 const StyledTagsContainer = styled(Main)`

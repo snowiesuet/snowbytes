@@ -7,7 +7,9 @@ import { srConfig } from '@config';
 import { Layout } from '@components';
 import { FormattedIcon } from '@components/icons';
 import styled from 'styled-components';
-import { theme, mixins, media, Main } from '@styles';
+import { mixins, media, Main } from '@styles';
+import { theme } from '@styles/theme';
+
 const { colors, fonts, fontSizes } = theme;
 
 const StyledMainContainer = styled(Main)``;

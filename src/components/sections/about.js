@@ -4,7 +4,9 @@ import Img from 'gatsby-image';
 import sr from '@utils/sr';
 import { srConfig, github } from '@config';
 import styled from 'styled-components';
-import { theme, mixins, media, Section, Heading } from '@styles';
+import { mixins, media, Section, Heading } from '@styles';
+import { theme } from '@styles/theme';
+
 const { colors, fontSizes, fonts } = theme;
 
 const StyledContainer = styled(Section)`

@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { email } from '@config';
 import { Side } from '@components';
 import styled from 'styled-components';
-import { theme } from '@styles';
+import { theme } from '@styles/theme';
 const { colors, fontSizes, fonts } = theme;
 
 const StyledLinkWrapper = styled.div`

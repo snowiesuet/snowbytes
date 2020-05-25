@@ -3,7 +3,9 @@ import PropTypes from 'prop-types';
 import { FormattedIcon } from '@components/icons';
 import { socialMedia } from '@config';
 import styled from 'styled-components';
-import { theme, mixins, media } from '@styles';
+import { mixins, media } from '@styles';
+import { theme } from '@styles/theme';
+
 const { colors, fontSizes, fonts } = theme;
 
 const StyledContainer = styled.footer`

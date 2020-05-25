@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 import anime from 'animejs';
 import { IconLoader } from '@components/icons';
 import styled from 'styled-components';
-import { theme, mixins } from '@styles';
+import { mixins } from '@styles';
+import { theme } from '@styles/theme';
 const { colors } = theme;
 
 const StyledContainer = styled.div`

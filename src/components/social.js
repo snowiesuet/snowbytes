@@ -4,7 +4,7 @@ import { socialMedia } from '@config';
 import { Side } from '@components';
 import { FormattedIcon } from '@components/icons';
 import styled from 'styled-components';
-import { theme } from '@styles';
+import { theme } from '@styles/theme';
 const { colors } = theme;
 
 const StyledList = styled.ul`

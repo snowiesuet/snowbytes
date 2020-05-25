@@ -1,22 +1,52 @@
 import { hex2rgba } from '@utils';
 
-const ACCENT = '#64ffda';
-const DARK_BG = '#020c1b';
-const BG = '#0a192f';
-
+//light
+const LIGHT_ACCENT = '#823350';
+const LIGHTER_BG = '#ffffff';
+const DARKER_BG = '#000000';
+const DARK_ACCENT = '#CDCA7E';
+const DARK_BG = '#0B0011';
+const LIGHT_BG = '#ffffff';
 const theme = {
-  colors: {
-    darkNavy: DARK_BG,
-    navy: BG,
-    lightNavy: '#172a45',
+  dark_colors: {
+    darkNavy: DARKER_BG,
+    navy: DARK_BG,
+    lightNavy: '#574063',
     lightestNavy: '#303C55',
-    slate: '#8892b0',
-    lightSlate: '#a8b2d1',
-    lightestSlate: '#ccd6f6',
+    slate: '#d9d4e3',
+    lightSlate: '#D9D4E3',
+    lightestSlate: '#FCFAFC',
     white: '#e6f1ff',
-    green: ACCENT,
-    transGreen: hex2rgba(ACCENT, 0.07),
+    green: DARK_ACCENT,
+    transGreen: hex2rgba(DARK_ACCENT, 0.07),
     shadowNavy: hex2rgba(DARK_BG, 0.7),
+  },
+  light_colors: {
+    darkNavy: LIGHT_BG,
+    navy: LIGHTER_BG,
+    lightNavy: '#D6CADD',
+    lightestNavy: '#303C55',
+    slate: '#796878',
+    lightSlate: '#808085',
+    lightestSlate: '#8D6497',
+    white: '#e6f1ff',
+    green: LIGHT_ACCENT,
+    transGreen: hex2rgba(LIGHT_ACCENT, 0.07),
+    shadowNavy: hex2rgba(LIGHT_BG, 0.7),
+  },
+
+  colors: {
+    darkNavy: LIGHT_BG,
+    navy: LIGHTER_BG,
+    lightNavy: '#D6CADD',
+    lightestNavy: '#303C55',
+    slate: '#796878',
+    lightSlate: '#808085',
+    lightestSlate: '#8D6497',
+    white: '#e6f1ff',
+    green: LIGHT_ACCENT,
+    transGreen: hex2rgba(LIGHT_ACCENT, 0.07),
+    shadowNavy: hex2rgba(LIGHT_BG, 0.7),
   },
 
   fonts: {
@@ -58,4 +88,18 @@ const theme = {
   loaderDelay: 2000,
 };
 
-export default theme;
+const lightTheme = {
+  body: '#E2E2E2',
+  text: '#363537',
+  toggleBorder: '#FFF',
+  gradient: 'linear-gradient(#39598A, #79D7ED)',
+};
+
+const darkTheme = {
+  body: '#363537',
+  text: '#FAFAFA',
+  toggleBorder: '#6B8096',
+  gradient: 'linear-gradient(#091236, #1E215D)',
+};
+
+export { theme, lightTheme, darkTheme };
